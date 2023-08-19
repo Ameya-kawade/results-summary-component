@@ -10,6 +10,7 @@ html{
 
 body{
     font-size: 1.125rem;
+    height: fit-content;
 }
 
 .black-text{
@@ -21,7 +22,7 @@ body{
 }
 @media screen and (min-width:200px) {
     .main-container{
-        min-height: 100vh;
+        min-height: fit-content;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -62,6 +63,8 @@ body{
         color: white;
     }
     .paragraph{
+        width: 90%;
+        max-width: 297px;
         margin: 0em auto 1.7em auto;
         font-size: 1rem;
         color: hsl(241, 100%, 89%);
@@ -71,12 +74,16 @@ body{
         width: 100%;
         padding: 1em;
     }
+    #s-heading{
+        font-weight: 500;
+    }
     .result-containers{
         height: 50px;
         width: 100%;
         margin: 1em auto;
         background-color: aqua;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         padding: 1em;
@@ -116,7 +123,7 @@ body{
         border: none;
         background-color: #303b59;
         color: aliceblue;
-        transition: all .5s ease-out;
+        transition: all .2s ease-out;
     }
 
     #continue:hover{
@@ -124,6 +131,81 @@ body{
         cursor:pointer;
     }
     
+}
+
+@media screen and (min-width : 680px) {
+    body{
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-container{
+        flex-direction: row;
+        width: 70%;
+        max-width: 600px;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: fit-content;
+        height: fit-content;
+        background-color: white;
+        box-shadow: 3px 2px 15px grey;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+    #first-box{
+        font-size: 1em;
+        width: 50%;
+        height: 100%;
+        padding: 1.5em 1.2em;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    #second-box{
+        font-size: 1em;
+        width: 50%;
+        height: 100%;
+        padding: 1.5em 1.8em;
+        padding-inline: 1.8em;
+    }
+    #f-heading{
+        margin: 0 auto;
+        margin-bottom: 1.5em;
+    }
+    .circle{
+        font-size: 1.4rem;
+    }
+    #great{
+        margin-bottom: .5em;
+    }
+    .paragraph{
+        width: 84%;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 1.5em;
+    }
+    .result-containers{
+        height: fit-content;
+        font-size: 80%;
+    }
+    #s-heading{
+        margin-bottom: 1.3em;
+        font-weight: 500;
+    }
+    #continue{
+        margin: 2em auto 0 auto;
+    }
+}
+
+.result-containers{
+    font-weight: 800;
+}
+
+#continue{
+    font-weight: 700;
 }
 
 .attribution { font-size: 11px; text-align: center; }
